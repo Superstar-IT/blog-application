@@ -30,9 +30,7 @@ Task: Next.js Assessment - Blog Application
 - These routes are defined within the file structure (e.g., `pages/posts/[id].js`).
 
 ### 7. API Integration
-- Data fetching is implemented using:
-- `getServerSideProps` for real-time data fetching.
-- `getStaticProps` for static data fetching during build time.
+- Data fetching is implemented using `getStaticProps` for static data fetching during build time.
 
 ## Quick Run
 
