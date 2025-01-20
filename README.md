@@ -5,46 +5,34 @@ Task: Next.js Assessment - Blog Application
 -  [Next.js - 15](https://github.com/nestjs/nest)
 
 ## Approach Overview
-1.	Component-Driven Design:
-```bash
-    •	Each UI element, like the navbar, dropdown, or post list, is created as reusable components.
-	•	This promotes modularity and makes it easier to maintain or extend functionality.
-```
+### 1. Component-Driven Design
+- Each UI element, such as the navbar, dropdown, or post list, is implemented as a reusable component.
+- This promotes modularity, making the application easier to maintain and extend.
 
-2.	State Management with Context API:
-```bash
-    •	Global states, such as selected hashtags or search queries, are managed using React’s Context API.
-	•	This eliminates prop-drilling and makes state accessible across the component tree.
-```
+### 2. State Management with Context API
+- Global states, like selected hashtags or search queries, are managed using React’s Context API.
+- Eliminates prop-drilling, ensuring state accessibility across the component tree.
 
-3.	Dynamic Filtering:
-```bash
-	•	Implemented a hashtag-based filtering mechanism to display posts dynamically.
-	•	Posts are filtered in-memory using JavaScript’s filter function.
-	•	React’s useMemo is used to re-evaluate filtered posts when the user selects a hashtag.
-```
+### 3. Dynamic Filtering
+- A hashtag-based filtering mechanism dynamically displays posts.
+- Posts are filtered in-memory using JavaScript's `filter` function.
+- `useMemo` optimizes performance by recalculating filtered posts only when hashtags change.
 
-4.	Tailwind CSS for Styling:
-```bash
-	•	Tailwind CSS simplifies creating responsive, utility-based styles.
-	•	Dynamic classes (e.g., changing colors or visibility based on state) are used for dropdowns, buttons, and hover effects.
-```
+### 4. Tailwind CSS for Styling
+- Tailwind CSS simplifies the creation of responsive, utility-based styles.
+- Dynamic classes enable conditional styling for dropdowns, buttons, and hover effects.
 
-5. Static Generation with getStaticProps and getStaticPaths
-```bash
-	•	For individual post details page, getStaticProps and getStaticPaths are used to generate static pages at build time.
-```
+### 5. Static Generation with `getStaticProps` and `getStaticPaths`
+- Individual post detail pages are statically generated at build time.
 
-6. Dynamic Routing
-```bash
-    •   Dynamic routes, like /posts/[id], are used for individual post pages.
-	•	The dynamic paths are defined in the file structure (e.g., pages/posts/[id].js).
-```
+### 6. Dynamic Routing
+- Dynamic routes, such as `/posts/[id]`, are utilized for individual post pages.
+- These routes are defined within the file structure (e.g., `pages/posts/[id].js`).
 
-7.  API Integration
-```bash
-    •	Posts and data can be fetched from external APIs using getServerSideProps for real-time data or getStaticProps for static data.
-```
+### 7. API Integration
+- Data fetching is implemented using:
+- `getServerSideProps` for real-time data fetching.
+- `getStaticProps` for static data fetching during build time.
 
 ## Quick Run
 
