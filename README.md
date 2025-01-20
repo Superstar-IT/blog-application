@@ -6,30 +6,37 @@ Task: Next.js Assessment - Blog Application
 
 ## Approach Overview
 1.	Component-Driven Design:
+
 	•	Each UI element, like the navbar, dropdown, or post list, is created as reusable components.
 	•	This promotes modularity and makes it easier to maintain or extend functionality.
 
 2.	State Management with Context API:
+
 	•	Global states, such as selected hashtags or search queries, are managed using React’s Context API.
 	•	This eliminates prop-drilling and makes state accessible across the component tree.
 
 3.	Dynamic Filtering:
+
 	•	Implemented a hashtag-based filtering mechanism to display posts dynamically.
 	•	Posts are filtered in-memory using JavaScript’s filter function.
 	•	React’s useMemo is used to re-evaluate filtered posts when the user selects a hashtag.
 
 4.	Tailwind CSS for Styling:
+
 	•	Tailwind CSS simplifies creating responsive, utility-based styles.
 	•	Dynamic classes (e.g., changing colors or visibility based on state) are used for dropdowns, buttons, and hover effects.
 
 5. Static Generation with getStaticProps and getStaticPaths
+
 	•	For individual post details page, getStaticProps and getStaticPaths are used to generate static pages at build time.
 
 6. Dynamic Routing
+
     •   Dynamic routes, like /posts/[id], are used for individual post pages.
 	•	The dynamic paths are defined in the file structure (e.g., pages/posts/[id].js).
 
 7.  API Integration
+
     •	Posts and data can be fetched from external APIs using getServerSideProps for real-time data or getStaticProps for static data.
 
 ## Quick Run
